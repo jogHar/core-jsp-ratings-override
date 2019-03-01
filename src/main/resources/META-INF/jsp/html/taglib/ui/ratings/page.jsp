@@ -13,7 +13,11 @@
  * details.
  */
 --%>
-
+<style>
+	.average-star-top{
+	vertical-align: top;
+	}
+</style>
 <%@ include file="/html/taglib/ui/ratings/init.jsp" %>
 
 <%
@@ -99,7 +103,7 @@ if (ratingsEntry != null) {
 				</div>
 			</c:if>
 
-			<div class="liferay-rating-score" id="<%= randomNamespace %>ratingScore">
+			<div class="liferay-rating-score average-star-top" id="<%= randomNamespace %>ratingScore">
 				<div id="<%= randomNamespace %>ratingScoreContent">
 					<div class="rating-label">
 						<liferay-ui:message key="average" />
@@ -114,7 +118,7 @@ if (ratingsEntry != null) {
 							double averageNumberOfStars = averageScore * numberOfStars;
 						%>
 
-							<span class="rating-element <%= (i <= averageIndex) ? "icon-star" : "icon-star-empty" %>" title="<%= TrashUtil.isInTrash(className, classPK) ? LanguageUtil.get(resourceBundle, "ratings-are-disabled-because-this-entry-is-in-the-recycle-bin") : ((i == 1) ? LanguageUtil.format(request, ((averageNumberOfStars == 1.0) ? "the-average-rating-is-x-star-out-of-x" : "the-average-rating-is-x-stars-out-of-x"), new Object[] {averageNumberOfStars, numberOfStars}, false) : StringPool.BLANK) %>"></span>
+							<span class="hidden rating-element <%= (i <= averageIndex) ? "icon-star" : "icon-star-empty" %>" title="<%= TrashUtil.isInTrash(className, classPK) ? LanguageUtil.get(resourceBundle, "ratings-are-disabled-because-this-entry-is-in-the-recycle-bin") : ((i == 1) ? LanguageUtil.format(request, ((averageNumberOfStars == 1.0) ? "the-average-rating-is-x-star-out-of-x" : "the-average-rating-is-x-stars-out-of-x"), new Object[] {averageNumberOfStars, numberOfStars}, false) : StringPool.BLANK) %>"></span>
 
 						<%
 						}
