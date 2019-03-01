@@ -90,7 +90,7 @@ CommentSectionDisplayContext commentSectionDisplayContext = CommentDisplayContex
 								</c:when>
 								<c:otherwise>
 									<liferay-ui:icon
-										cssClass="hidden  subscribe-link"
+										cssClass="hidden subscribe-link"
 										iconCssClass="icon-ok-sign"
 										label="<%= true %>"
 										message="subscribe-to-comments"

@@ -13,6 +13,9 @@
  * details.
  */
 --%>
+<%@page import="com.liferay.ratings.kernel.service.persistence.RatingsStatsUtil"%>
+<%@page import="com.liferay.ratings.kernel.model.RatingsStats"%>
+<%@page import="com.liferay.ratings.kernel.model.RatingsEntry"%>
 <style>
 	.average-star-top{
 	vertical-align: top;
