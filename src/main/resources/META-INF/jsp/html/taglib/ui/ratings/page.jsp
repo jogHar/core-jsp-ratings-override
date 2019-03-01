@@ -109,9 +109,9 @@ if (ratingsEntry != null) {
 			<div class="liferay-rating-score average-star-top" id="<%= randomNamespace %>ratingScore">
 				<div id="<%= randomNamespace %>ratingScoreContent">
 					<div class="rating-label">
-						<liferay-ui:message key="average" />
+						<!-- <liferay-ui:message key="average" /> --><span class="glyphicon glyphicon-thumbs-up"></span>
 
-						(<%= ratingsStats.getTotalEntries() %> <liferay-ui:message key='<%= (ratingsStats.getTotalEntries() == 1) ? "vote" : "votes" %>' />)
+						(<%= ratingsStats.getTotalEntries() %> <liferay-ui:message key='<%= (ratingsStats.getTotalEntries() == 1) ? "Like" : "Likes" %>' />)
 					</div>
 
 					<liferay-util:whitespace-remover>
