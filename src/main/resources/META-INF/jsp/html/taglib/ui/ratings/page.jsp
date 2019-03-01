@@ -161,14 +161,14 @@ if (ratingsEntry != null) {
 								<span class="glyphicon glyphicon-thumbs-up rating-element rating-thumb-up rating-<%= (thumbUp) ? "on" : "off" %>" title="<%= thumbsTitle %>"><%= positiveVotes %></span>
 
 								<c:if test="<%= type.equals(RatingsType.THUMBS.getValue()) %>">
-									<span class="glyphicon glyphicon-thumbs-down rating-element rating-thumb-down rating-<%= (thumbDown) ? "on" : "off" %>" title="<%= thumbsTitle %>"><%= negativeVotes %></span>
+									<span class="hidden glyphicon glyphicon-thumbs-down rating-element rating-thumb-down rating-<%= (thumbDown) ? "on" : "off" %>" title="<%= thumbsTitle %>"><%= negativeVotes %></span>
 								</c:if>
 							</c:when>
 							<c:otherwise>
 								<a class="glyphicon glyphicon-thumbs-up rating-element rating-thumb-up rating-<%= (thumbUp) ? "on" : "off" %>" href="javascript:;"><%= positiveVotes %></a>
 
 								<c:if test="<%= type.equals(RatingsType.THUMBS.getValue()) %>">
-									<a class="glyphicon glyphicon-thumbs-down rating-element rating-thumb-down rating-<%= (thumbDown) ? "on" : "off" %>" href="javascript:;"><%= negativeVotes %></a>
+									<a class="hidden glyphicon glyphicon-thumbs-down rating-element rating-thumb-down rating-<%= (thumbDown) ? "on" : "off" %>" href="javascript:;"><%= negativeVotes %></a>
 								</c:if>
 
 								<div class="rating-input-container">
